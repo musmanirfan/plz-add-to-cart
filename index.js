@@ -21,13 +21,13 @@ let products = [
 
 
 
-function productDisplay() {
+let productDisplay = () => {
     productList.innerHTML = ""
     products.map((product, i) => {
         productList.innerHTML += `<div class="innerDiv"><img src=${product.img} alt="image1">
         <h2>${product.Name}</h2>
         <p>${product.price}</p>
-        <button onclick="${()=>{}}">Add to Cart</button>
+        <button onclick="addToCart(${i})">Add to Cart</button>
         </div>`
         // console.log(product);
     })
@@ -37,8 +37,11 @@ productDisplay();
 
 
 let cart = [];
-function addToCart() {
-    cart.push(product);
+function addToCart(index) {
+    if(!products[index]){
+        cart.push(products[index]);
+    }else{
+        alert("Quantity Updated")
+    }
     console.log(cart);
-    
 }
