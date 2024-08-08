@@ -1,0 +1,4 @@
+.innerDiv{
+    display: flex;
+    flex-direction: column;
+}
