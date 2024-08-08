@@ -39,10 +39,14 @@ productDisplay();
 let cart = [];
 function addToCart(index) {
     let productInCart = cart.find(item => item.Name === products[index].Name);
-    if(!productInCart){
-        let productClone = 1
-        cart.push(products[index]);
-    }else{
+    if (!productInCart) {
+        let productClone = { ...products[index], }
+        productClone.qty = 1;
+        productClone.total = productClone.qty * productClone.price;
+        cart.push(productClone);
+    } else {
+        productInCart.qty += 1;
+        productInCart.total = productInCart.qty * productInCart.price
         products[index].price + products[index].price;
         alert("Quantity Updated")
     }
