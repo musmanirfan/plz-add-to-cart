@@ -21,16 +21,24 @@ let products = [
 
 
 
-function productDisplay () {
+function productDisplay() {
     productList.innerHTML = ""
     products.map((product, i) => {
         productList.innerHTML += `<div class="innerDiv"><img src=${product.img} alt="image1">
         <h2>${product.Name}</h2>
         <p>${product.price}</p>
-        <button>Add to Cart</button>
+        <button onclick="${()=>{}}">Add to Cart</button>
         </div>`
-        console.log(product);
+        // console.log(product);
     })
 }
 
-productDisplay()
+productDisplay();
+
+
+let cart = [];
+function addToCart() {
+    cart.push(product);
+    console.log(cart);
+    
+}
