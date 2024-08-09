@@ -27,7 +27,7 @@ let productDisplay = () => {
         productList.innerHTML += `<div class="innerDiv"><img src=${product.img} alt="image1">
         <h2>${product.Name}</h2>
         <p>${product.price}</p>
-        <button onclick="addToCart(${i})">Add to Cart</button>
+        <button onclick="addToCart(${i})">Add to Car</button>
         </div>`
         // console.log(product);
     })
